@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Najimdeen Adam — AI and full-stack developer</title>
+<meta name="description" content="Portfolio of Najimdeen Adam: natural-language-to-SQL tools, n8n workflow automation and database-backed AI products.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EEF2F7;--surface:#fff;--ink:#0F1B2D;--slate:#4A5A73;--line:#CBD5E3;--accent:#F5B301;--screen:#0F1B2D;--on:#DDE6F3;--mute:#9FB0C8;--kw:#F5B301;--str:#7BD3B0;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0A1220;--surface:#101C2F;--ink:#E8EEF7;--slate:#A3B1C6;--line:#24344F;--screen:#0D192B;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0A1220;--surface:#101C2F;--ink:#E8EEF7;--slate:#A3B1C6;--line:#24344F;--screen:#0D192B;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 "Source Serif 4",Georgia,"Times New Roman",serif;-webkit-text-size-adjust:100%}
+h1,h2,h3,.ui,.btn,.q,table,.t,.flow,figcaption,dt{font-family:"Familjen Grotesk","Helvetica Neue",Arial,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px 56px}
+a{color:var(--ink);text-decoration-line:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+p{margin:0 0 12px}
+.small{font-size:.92rem;color:var(--slate)}
+.hero{display:grid;gap:32px;padding:40px 0 0}
+h1{font-size:clamp(2.6rem,9vw,4.6rem);line-height:1;letter-spacing:-.025em;margin:0 0 14px;font-weight:700}
+.role{font:500 1.2rem/1.3 "Familjen Grotesk",sans-serif;color:var(--slate);margin:0 0 18px}
+.lede{font-size:1.3rem;line-height:1.45;max-width:32ch;margin:0 0 12px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.btn{font-weight:700;font-size:1rem;line-height:1;padding:14px 22px;border-radius:999px;border:2px solid var(--ink);text-decoration:none;color:var(--ink);min-height:44px;display:inline-flex;align-items:center}
+.btn.main{background:var(--accent);border-color:var(--accent);color:#0F1B2D}
+.cap{font:500 .98rem/1.4 "Familjen Grotesk",sans-serif;margin:0 0 10px}
+.qs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.q{font-weight:500;font-size:.95rem;line-height:1.2;background:transparent;color:var(--ink);border:1.5px solid var(--ink);border-radius:999px;padding:10px 14px;cursor:pointer;min-height:44px;text-align:left}
+.q[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.screen{background:var(--screen);color:var(--on);border:1px solid var(--line);border-radius:14px;padding:16px}
+.out{transition:opacity .18s}.out.fade{opacity:0}
+.bubble{background:rgba(255,255,255,.1);border-radius:12px 12px 12px 2px;padding:10px 14px;margin:0 0 12px;font:500 .98rem/1.4 "Familjen Grotesk",sans-serif;max-width:92%}
+pre{margin:0 0 12px;font:.82rem/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-x:auto;white-space:pre}
+.k{color:var(--kw)}.s{color:var(--str)}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.9rem;line-height:1.4}
+th{text-align:left;font-weight:500;color:var(--mute);padding:6px 12px 6px 0;border-bottom:1px solid rgba(255,255,255,.22);white-space:nowrap}
+td{padding:7px 12px 7px 0;border-bottom:1px solid rgba(255,255,255,.08);white-space:nowrap}
+.fine{margin:10px 0 0;font:.78rem/1.4 "Familjen Grotesk",sans-serif;color:var(--mute)}
+section{padding-top:56px}
+h2{font-size:1.6rem;line-height:1.2;margin:0 0 18px;padding-top:14px;border-top:3px solid var(--ink)}
+.about p{max-width:62ch}
+.proj{display:grid;gap:12px;padding:24px 0 26px;border-top:1px solid var(--line)}
+h3{font-size:1.45rem;line-height:1.15;margin:0 0 6px}
+.ar{font-weight:400}
+.ctx{font:500 1.02rem/1.35 "Familjen Grotesk",sans-serif;margin:0 0 6px}
+ul{margin:0 0 12px;padding-left:1.2rem}li{margin:0 0 6px}
+.links{display:flex;flex-wrap:wrap;gap:6px 22px;font-family:"Familjen Grotesk",sans-serif;font-weight:700}
+.feat{display:grid;gap:36px;margin-bottom:28px}
+.feat h3{font-size:1.3rem}
+figure{margin:16px 0 0}
+figcaption{font-size:.85rem;color:var(--slate);margin-top:10px}
+.flow{list-style:none;margin:0;padding:0 0 0 12px;border-left:2px solid var(--ink);font-size:.95rem}
+.flow li{position:relative;padding:3px 0 3px 18px;margin:0 0 4px}
+.flow li::before{content:"";position:absolute;left:-19px;top:.7em;width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--ink)}
+.flow li.hot{font-weight:700}.flow li.hot::before{background:var(--accent)}
+.flow small{display:block;font-weight:400;color:var(--slate)}
+.schema{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.t{border:1.5px solid var(--ink);border-radius:8px;background:var(--surface);font-size:.85rem;line-height:1.4;overflow:hidden}
+.t b{display:block;background:var(--ink);color:var(--bg);padding:5px 10px}
+.t span{display:block;padding:2px 10px}.t b+span{padding-top:7px}.t span:last-child{padding-bottom:8px}
+dl{margin:0;display:grid;gap:4px 24px}
+dt{font-weight:700;margin-top:12px}dd{margin:0;max-width:70ch}
+.plain{list-style:none;padding:0}.plain li{padding:12px 0;border-top:1px solid var(--line);max-width:72ch}
+footer{padding-top:44px}
+@media (min-width:880px){
+.hero{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:56px;align-items:center;padding-top:76px}
+.proj{grid-template-columns:minmax(0,.8fr) minmax(0,1.6fr);gap:40px}
+.feat{grid-template-columns:1fr 1fr;gap:48px}
+dl{grid-template-columns:200px 1fr}dt{margin-top:0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.out{transition:none}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<header class="hero">
+  <div>
+    <h1>Najimdeen Adam</h1>
+    <p class="role">AI and full-stack developer</p>
+    <p class="lede">I build tools that let anyone ask questions of their data in plain English.</p>
+    <p class="small">Founder of DataChat AI. Undergraduate at the University of Ibadan.</p>
+    <div class="btns">
+      <a class="btn main" href="#projects">See my projects</a>
+      <a class="btn" href="https://github.com/anajimdeen01-debug" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="#contact">Contact</a>
+    </div>
+  </div>
+  <div role="region" aria-label="Example question and answer">
+    <p class="cap">Pick a question to see what my tools do with it.</p>
+    <div class="qs">
+      <button class="q" type="button" aria-pressed="true">Patients with Malaria</button>
+      <button class="q" type="button" aria-pressed="false">Most prescribed drugs</button>
+      <button class="q" type="button" aria-pressed="false">Admitted and severe</button>
+    </div>
+    <div class="screen">
+      <div class="out" id="out" aria-live="polite">
+        <div class="bubble" id="bq"></div>
+        <pre><code id="sql"></code></pre>
+        <div class="tw"><table id="tbl"></table></div>
+      </div>
+      <p class="fine">An illustration using synthetic sample data from my MediQuery demo database. Not a live connection.</p>
+    </div>
+  </div>
+</header>
+
+<section class="about" id="about">
+  <h2>About</h2>
+  <p>I’m an undergraduate at the University of Ibadan who builds AI-powered software that makes data easier for non-technical people to use. I founded DataChat AI, a natural-language-to-SQL platform for businesses, adapted it into MediQuery AI for a university AI-in-medicine competition, and co-built SANAD for a corporate banking AI challenge.</p>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+
+  <article class="proj">
+    <div>
+      <h3>SANAD <span class="ar" lang="ar">سند</span></h3>
+      <p class="ctx">AI underwriting and Shariah-compliance engine for corporate banking</p>
+      <p class="small">Warba Bank Corporate Banking AI Challenge 2026, Track 1. Built with Olagunju Temitope.</p>
+    </div>
+    <div>
+      <p>Approving a corporate facility at an Islamic bank means reading dozens of pages of filings and checking each borrower’s income for Shariah compliance by hand. SANAD cross-checks a borrower’s documents, runs the Shariah screening, stress-tests debt-service coverage and drafts the bank’s credit documents. The live demo runs on a pre-loaded sample borrower dossier.</p>
+      <ul>
+        <li>Flags conflicts between what a borrower declares and what its other filings show, citing the document, page and clause.</li>
+        <li>Deterministic Shariah screening based on AAOIFI Standards 21 and 35, including the purification amount owed to charity.</li>
+        <li>Interactive stress test of debt-service coverage against a 1.25x covenant floor, with a revenue-shock slider.</li>
+        <li>Generates four bank documents: a credit memorandum, a Murabaha term sheet, a relationship-manager brief and a Shariah board memo.</li>
+      </ul>
+      <p><strong>My role.</strong> Lead AI and financial-logic engineer: the Gemini reasoning pipelines, cross-document checking and the Shariah accounting engine. Olagunju Temitope built the backend, interface and deployment.</p>
+      <p><strong>Built with</strong> React 19, TypeScript, Vite, Tailwind CSS, Python (FastAPI), Google Gemini 2.5, Docker, Netlify and Railway.</p>
+      <p class="links"><a href="https://sanad-engine.netlify.app" target="_blank" rel="noopener">Open the live demo</a><a href="https://github.com/anajimdeen01-debug/sanad-frontend" target="_blank" rel="noopener">View the code</a></p>
+    </div>
+  </article>
+
+  <article class="proj">
+    <div>
+      <h3>MediQuery AI</h3>
+      <p class="ctx">Natural-language interface for hospital databases</p>
+      <p class="small">NACOS-UI-DATICAN Undergraduates Coding Competition for AI in Medicine, 2026. Team DataMed, built with Ganiyu Azeez Olayemi.</p>
+    </div>
+    <div>
+      <p>Doctors, nurses and hospital administrators often cannot get answers from their own patient records without SQL skills. In MediQuery AI they type a question in plain English, and an AI agent turns it into SQL, runs it against the hospital database and returns a readable table.</p>
+      <ul>
+        <li>Four related tables (patients, diagnoses, prescriptions and lab results) filled with synthetic Nigerian patient data. No real patient records are used.</li>
+        <li>An agent tuned for a medical setting: it checks the database structure first and joins tables so results show names instead of raw IDs.</li>
+        <li>AES-256 encrypted database connections, session-based login, invite-code registration and rate limiting.</li>
+      </ul>
+      <p><strong>Built with</strong> React, Node.js and Express.js, n8n on Railway, OpenRouter (GPT-4o), MySQL on Aiven and Netlify. The code was submitted to the competition and confirmed received by the organizers.</p>
+      <p class="links"><a href="https://mediqueryai.netlify.app" target="_blank" rel="noopener">Open the live app</a></p>
+      <p class="small">Login required. Demo access is available on request.</p>
+    </div>
+  </article>
+
+  <article class="proj">
+    <div>
+      <h3>DataChat AI</h3>
+      <p class="ctx">Chat with your data in plain English</p>
+      <p class="small">Founder and developer of a B2B SaaS product.</p>
+    </div>
+    <div>
+      <p>DataChat AI lets businesses ask questions about their SQL databases and spreadsheets in plain English and get answers instantly. It has grown from a prototype into beta testing with early users.</p>
+      <ul>
+        <li>The agent explores the database structure first, turns ID columns into readable names and asks for confirmation before destructive actions such as deleting data.</li>
+        <li>Excel support: analyse a spreadsheet without saving it, or import it into the database as a table to query later.</li>
+        <li>Built for several clients at once: AES-256 encrypted connections, session authentication, invite-code registration, rate limiting and per-user message limits.</li>
+      </ul>
+      <p><strong>Built with</strong> React, Node.js and Express.js, n8n on Railway, OpenRouter (GPT-4o), MySQL on Aiven and Netlify.</p>
+      <p class="links"><a href="https://datachatai.netlify.app" target="_blank" rel="noopener">Open the live app</a></p>
+      <p class="small">Login required. Demo access is available on request.</p>
+    </div>
+  </article>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="feat">
+    <article>
+      <h3>n8n workflow automation</h3>
+      <p>I build the backends of my products as n8n workflows hosted on Railway. The chat flow behind DataChat AI and MediQuery AI takes a message from the website, checks it, applies limits and hands it to an AI agent that queries the customer’s own database.</p>
+      <figure>
+        <ol class="flow">
+          <li>Webhook receives the chat message</li>
+          <li>Input is validated</li>
+          <li>Session is looked up and checked</li>
+          <li>Rate limit and message limit are applied</li>
+          <li>Database credentials are decrypted</li>
+          <li class="hot">AI agent writes and runs the SQL<small>OpenRouter model, SQL tool and chat memory</small></li>
+          <li>Answer is returned and usage is counted</li>
+        </ol>
+        <figcaption>The chat workflow. Each step has its own error response.</figcaption>
+      </figure>
+    </article>
+    <article>
+      <h3>Databases and SQL</h3>
+      <p>MySQL on Aiven runs the live products, and PostgreSQL holds the agent’s chat memory. I set up and seeded the four-table MediQuery hospital database, and I build agents that inspect a schema, write safe SQL and explain the result in plain English.</p>
+      <figure>
+        <div class="schema">
+          <div class="t"><b>patients</b><span>id</span><span>full_name</span><span>gender</span><span>status</span></div>
+          <div class="t"><b>diagnoses</b><span>patient_id</span><span>disease</span><span>severity</span></div>
+          <div class="t"><b>prescriptions</b><span>patient_id</span><span>drug_name</span><span>dosage</span></div>
+          <div class="t"><b>lab_results</b><span>patient_id</span><span>test_name</span><span>status</span></div>
+        </div>
+        <figcaption>The MediQuery hospital database. Every table points back to patients through patient_id.</figcaption>
+      </figure>
+    </article>
+  </div>
+  <dl>
+    <dt>Languages</dt><dd>JavaScript, TypeScript, Python, SQL, HTML and CSS</dd>
+    <dt>Frameworks</dt><dd>React, Node.js, Express.js</dd>
+    <dt>AI</dt><dd>LLM integration with OpenRouter (GPT-4o) and Google Gemini, prompt engineering for natural-language-to-SQL agents, AAOIFI Shariah screening logic</dd>
+    <dt>Cloud and tools</dt><dd>Netlify, Railway, Aiven, GitHub, Google AI Studio</dd>
+    <dt>Security basics</dt><dd>AES-256 encrypted connections, session authentication, rate limiting</dd>
+  </dl>
+</section>
+
+<section id="record">
+  <h2>Competitions and education</h2>
+  <ul class="plain">
+    <li><strong>University of Ibadan.</strong> Undergraduate student.</li>
+    <li><strong>NACOS-UI-DATICAN Coding Competition for AI in Medicine, 2026.</strong> Team DataMed. Submitted MediQuery AI.</li>
+    <li><strong>Warba Bank Corporate Banking AI Challenge 2026, Track 1.</strong> Built SANAD with Olagunju Temitope for the client-documentation track.</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email me for demo access to MediQuery AI and DataChat AI, or with any questions about my projects.</p>
+  <p class="links"><a href="mailto:najimdeenadam@gmail.com">najimdeenadam@gmail.com</a><a href="https://www.linkedin.com/in/adam-najimdeen-5861523aa" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/anajimdeen01-debug" target="_blank" rel="noopener">GitHub</a></p>
+</section>
+</main>
+
+<script>
+(function(){
+  var D=[
+    {q:'Show all patients diagnosed with Malaria',
+     sql:"SELECT p.full_name, d.severity, d.diagnosis_date\nFROM patients p\nJOIN diagnoses d ON d.patient_id = p.id\nWHERE d.disease = 'Malaria'\nORDER BY d.diagnosis_date;",
+     cols:['Patient','Severity','Diagnosed'],
+     rows:[['Chukwuemeka Obi','Moderate','2026-01-10'],['Ifeoma Okafor','Mild','2026-03-10'],['Emeka Nwachukwu','Mild','2026-04-08'],['Blessing Okonkwo','Moderate','2026-05-10'],['Sani Abubakar','Moderate','2026-06-10']]},
+    {q:'Which drugs were prescribed the most?',
+     sql:"SELECT drug_name, COUNT(*) AS times_prescribed\nFROM prescriptions\nGROUP BY drug_name\nORDER BY times_prescribed DESC, drug_name\nLIMIT 5;",
+     cols:['Drug','Times prescribed'],
+     rows:[['Artemether-Lumefantrine',5],['Amlodipine',3],['Ciprofloxacin',3],['Ferrous Sulphate',3],['Metformin',3]]},
+    {q:'Show admitted patients with severe diagnoses',
+     sql:"SELECT p.full_name, d.disease\nFROM patients p\nJOIN diagnoses d ON d.patient_id = p.id\nWHERE p.status = 'Admitted'\n  AND d.severity = 'Severe'\nORDER BY p.full_name;",
+     cols:['Patient','Diagnosis'],
+     rows:[['Fatima Abdullahi','Diabetes Type 2'],['Musa Garba','Hypertension'],['Rotimi Bello','Hypertension'],['Tunde Fashola','Tuberculosis'],['Yemi Adesanya','Diabetes Type 2']]}
+  ];
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var btns=document.querySelectorAll('.q'),out=document.getElementById('out'),bq=document.getElementById('bq'),sq=document.getElementById('sql'),tb=document.getElementById('tbl');
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  function hi(s){return esc(s).replace(/\b(SELECT|FROM|JOIN|ON|WHERE|ORDER BY|GROUP BY|AS|AND|DESC|LIMIT|COUNT)\b/g,'<span class="k">$1</span>').replace(/'[^']*'/g,'<span class="s">$&</span>');}
+  function show(i){
+    var d=D[i];
+    bq.textContent=d.q;
+    sq.innerHTML=hi(d.sql);
+    tb.innerHTML='<thead><tr>'+d.cols.map(function(c){return '<th scope="col">'+esc(c)+'</th>';}).join('')+'</tr></thead><tbody>'+d.rows.map(function(r){return '<tr>'+r.map(function(c){return '<td>'+esc(c)+'</td>';}).join('')+'</tr>';}).join('')+'</tbody>';
+  }
+  btns.forEach(function(b,i){
+    b.addEventListener('click',function(){
+      if(b.getAttribute('aria-pressed')==='true')return;
+      btns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
+      if(reduce){show(i);return;}
+      out.classList.add('fade');
+      setTimeout(function(){show(i);out.classList.remove('fade');},180);
+    });
+  });
+  show(0);
+})();
+</script>
+</body>
+</html>
